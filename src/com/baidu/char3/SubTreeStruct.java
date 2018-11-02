@@ -91,16 +91,16 @@ public class SubTreeStruct
     		int size = queue.size();
     		for(int i=0;i<size;i++)
     		{
-    		TreeNode fNode = queue.poll();
-    		System.out.print(fNode.val+"\t");
-    		if(fNode.left != null)
-    		{
-    			queue.offer(fNode.left);
-    		}
-    		if(fNode.right != null)
-    		{
-    			queue.offer(fNode.right);
-    		}
+    		    TreeNode fNode = queue.poll();
+    		    System.out.print(fNode.val+"\t");
+    		    if(fNode.left != null)
+    		    {
+    			     queue.offer(fNode.left);
+    		    }
+    		    if(fNode.right != null)
+    		    {
+    			    queue.offer(fNode.right);
+    		    }
     		}
     		System.out.println();
     	}

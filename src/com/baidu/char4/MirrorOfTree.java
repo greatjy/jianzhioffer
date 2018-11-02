@@ -1,5 +1,6 @@
 package com.baidu.char4;
 
+import java.lang.Thread.State;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -97,14 +98,16 @@ public class MirrorOfTree
     		    treeNode.left = treeNode.right;
     		    treeNode.right = temp;
     		}
-    		if(treeNode.left != null)
+    		if(treeNode.left != null) //注意这里是node 而不是 root
     		{
     			stack.push(treeNode.left);
     		}
-    		if(treeNode.right != null)
+    		if(treeNode.right != null)//同上
     		{
     			stack.push(treeNode.right);
     		}
     	}
     }
+    
+    
 }
