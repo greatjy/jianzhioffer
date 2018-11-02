@@ -35,7 +35,6 @@ public class Testprintrec
 	            printinclockwiseOnce(matrix,start,ans);
 	            start++;
 	        }
-	        //System.out.println(ans);
 	        return ans;
 	    }
 	    public static void printinclockwiseOnce(int[][] matrix,int start,ArrayList<Integer> ans)
@@ -48,7 +47,6 @@ public class Testprintrec
 	            ans.add(matrix[start][i]);
 	            
 	        }
-	        //System.out.println(ans+"heng1");
 	        if(start < endY)
 	        {
 	            for(int i=start+1;i<=endY;i++)
@@ -56,15 +54,13 @@ public class Testprintrec
 	                ans.add(matrix[i][endX]);
 	              
 	            }
-	           // System.out.println(ans+"shu1");
 	            //¡£¡£¡£tomorrow morning
 	        }
 	        if(start < endX && start< endY)
 	        {
 	            for(int i=endX-1;i>= start;i--)
 	            {
-	                ans.add(matrix[endY][i]);
-	           //     System.out.println(ans);	               
+	                ans.add(matrix[endY][i]);              
 	            }
 	            
 	        }
@@ -73,7 +69,6 @@ public class Testprintrec
 	            for(int i=endY-1;i>start;i--)
 	            {
 	                ans.add(matrix[i][start]);
-	            //    System.out.println(ans);
 	            }
 	            
 	        }
