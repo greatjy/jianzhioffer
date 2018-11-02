@@ -88,8 +88,11 @@ public class SubTreeStruct
     	}
     	while(!queue.isEmpty())
     	{
+    		int size = queue.size();
+    		for(int i=0;i<size;i++)
+    		{
     		TreeNode fNode = queue.poll();
-    		System.out.println(fNode.val);
+    		System.out.print(fNode.val+"\t");
     		if(fNode.left != null)
     		{
     			queue.offer(fNode.left);
@@ -98,6 +101,8 @@ public class SubTreeStruct
     		{
     			queue.offer(fNode.right);
     		}
+    		}
+    		System.out.println();
     	}
     }
     
