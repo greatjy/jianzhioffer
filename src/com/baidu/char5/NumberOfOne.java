@@ -22,14 +22,14 @@ public class NumberOfOne
 		{
 			//每一位开始遍历 出去自己哪一位的高位*10^i-1 +1*10^i(>1) =1 低位+1，0 不加
 			high = num/(int)(Math.pow(10, i));  //除去低位剩下之前的数字
-			temp = num%(int)(Math.pow(10, i));  //低位和低位之后的数字
+			temp = num%(int)(Math.pow(10, i));  //低位和低位之后的数字 临时变量
 			curr = temp /(int)(Math.pow(10, i-1));//第i位数字 
 			low = temp % (int)(Math.pow(10, i-1));//剩下的数字
 			if(curr == 1)
 			{
 				total += high*(int)(Math.pow(10, i-1)) +low +1;
 			}
-			else if(curr == 0)
+			else if(curr == 0) 
 			{
 				total += high*(int)(Math.pow(10, i-1));
 			}
