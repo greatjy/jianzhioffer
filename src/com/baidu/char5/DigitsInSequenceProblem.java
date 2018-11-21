@@ -47,4 +47,6 @@ public class DigitsInSequenceProblem
 			return 10;
 		return (int)(9*Math.pow(10, digits-1));
 	}
+	
+	
 }
