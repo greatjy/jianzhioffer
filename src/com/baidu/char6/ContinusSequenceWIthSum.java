@@ -8,7 +8,7 @@ public class ContinusSequenceWIthSum
     public static void main(String[] args)
 	{
 		int sum = 15;
-		ArrayList<ArrayList<Integer>> ans = findoutsequence(sum);
+		ArrayList<ArrayList<Integer>> ans =  findoutsequence(sum);//findoutsequence(sum);
 		for(ArrayList<Integer> arrayList : ans)
 		{
 			for(int i:arrayList)
@@ -60,5 +60,48 @@ public class ContinusSequenceWIthSum
 			curSum += big;
 		}
 		return ans;
+	}
+	
+	private ArrayList<ArrayList<Integer>> getSequence(int sum)
+	{
+		ArrayList<ArrayList<Integer>> ans = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> list = null;
+		if(sum < 3)
+			return ans;
+		int small = 1;
+		int big = 2;
+		int mid = (sum+1)/2;
+		int curSum = small+big;
+		while(small < mid)
+		{
+			if(curSum == sum)
+			{
+				list = new ArrayList<>();
+				for(int i= small;i<=big;i++)
+				{
+					list.add(i);
+				}
+				ans.add(list);
+			}
+			while(curSum > sum && small < mid)
+			{
+				curSum -= small;
+				small++;
+				if(curSum == sum)
+				{
+					list = new ArrayList<>();
+					for(int i=small;i<=big;i++)
+					{
+						list.add(i);
+					}
+					ans.add(list);
+				}
+			}
+			big++;
+			curSum += big;
+
+		}
+		return ans;
+		
 	}
 }
