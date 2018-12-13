@@ -6,6 +6,7 @@ public class MyAtoi
 	{
 		String string = "+2147483647";
 		String string2 = "123a";
+		String string3 = "12345678.0";
 		int n = atoi(string);
 		int m = atoi(string2);
 		System.out.println(n+" "+m);
