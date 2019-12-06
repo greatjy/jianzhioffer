@@ -1,4 +1,5 @@
 # Write your MySQL query statement below
+# 寻找比昨天温度更高的天的id
 select 
     w1.Id
 from 
